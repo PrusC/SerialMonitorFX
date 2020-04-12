@@ -90,7 +90,7 @@ public class SerialConnection {
 
     public void addListener(SerialPortEventListener listener) throws ConnectionException {
         try {
-            this.port.addEventListener(listener, SerialPort.MASK_RXCHAR + SerialPort.MASK_BREAK);
+            this.port.addEventListener(listener, SerialPort.MASK_RXCHAR);
         } catch (SerialPortException ex) {
             throw new ConnectionException(ex.getMessage());
         }

@@ -170,6 +170,8 @@ public class Controller {
                 return new byte[]{0x0A};
             case "LFCR":
                 return new byte[]{0x0A, 0x0D};
+            case "CRLF":
+                return new byte[]{0x0D, 0x0A};
         }
         return null;
     }
